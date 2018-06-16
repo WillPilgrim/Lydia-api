@@ -5,5 +5,5 @@ export function calculateCost(accounts) {
         ? 4
         : 10;
   
-    return rate * storage * 100;
+    return rate * accounts * 100;
   }

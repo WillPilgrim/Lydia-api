@@ -30,27 +30,27 @@ provider:
   stage: dev
   region: ap-southeast-2
 
-# These environment variables are made available to our functions
-# under process.env.
-environment:
-  tableName:
-    Ref: AccountsTable
-  stripeSecretKey: ${self:custom.environment.stripeSecretKey}
+  # These environment variables are made available to our functions
+  # under process.env.
+  environment:
+    tableName: 
+      Ref: AccountsTable
+    stripeSecretKey: ${self:custom.environment.stripeSecretKey}
 
-iamRoleStatements:
-  - Effect: Allow
-    Action:
-      - dynamodb:DescribeTable
-      - dynamodb:Query
-      - dynamodb:Scan
-      - dynamodb:GetItem
-      - dynamodb:PutItem
-      - dynamodb:UpdateItem
-      - dynamodb:DeleteItem
-    # Restrict our IAM role permissions to
-    # the specific table for the stage
-    Resource:
-      - "Fn::GetAtt": [ AccountsTable, Arn ]
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      # Restrict our IAM role permissions to
+      # the specific table for the stage
+      Resource:
+        - "Fn::GetAtt": [ AccountsTable, Arn ]
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
