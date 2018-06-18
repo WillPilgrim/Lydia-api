@@ -3,16 +3,16 @@ Resources:
     Type: AWS::DynamoDB::Table
     Properties:
       # Generate a name based on the stage
-      TableName: ${self:custom.stage}-accounts
+      TableName: ${self:custom.stage}-templates
       AttributeDefinitions:
         - AttributeName: userId
           AttributeType: S
-        - AttributeName: accountId
+        - AttributeName: templateId
           AttributeType: S
       KeySchema:
         - AttributeName: userId
           KeyType: HASH
-        - AttributeName: accountId
+        - AttributeName: templateId
           KeyType: RANGE
       # Set the capacity based on the stage
       ProvisionedThroughput:
