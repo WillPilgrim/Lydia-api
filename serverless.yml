@@ -98,6 +98,18 @@ functions:
           cors: true
           authorizer: aws_iam
 
+  getTemp:
+    # Defines an HTTP API endpoint that calls the main function in get.js
+    # - path: url path is /accounts/{id}
+    # - method: GET request
+    handler: getTemp.main
+    events:
+      - http:
+          path: templates/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
+
   list:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /accounts
