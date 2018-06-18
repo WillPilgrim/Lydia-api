@@ -53,6 +53,7 @@ provider:
       # the specific table for the stage
       Resource:
         - "Fn::GetAtt": [ AccountsTable, Arn ]
+        - "Fn::GetAtt": [ TemplatesTable, Arn ]
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
