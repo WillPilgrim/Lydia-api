@@ -1,5 +1,5 @@
 Resources:
-  AccountsTable:
+  TemplatesTable:
     Type: AWS::DynamoDB::Table
     Properties:
       # Generate a name based on the stage

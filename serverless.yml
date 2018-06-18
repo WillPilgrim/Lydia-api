@@ -33,7 +33,7 @@ provider:
   # These environment variables are made available to our functions
   # under process.env.
   environment:
-    tableName: 
+    tableName1: 
       Ref: AccountsTable
     stripeSecretKey: ${self:custom.environment.stripeSecretKey}
 
@@ -127,8 +127,8 @@ functions:
 # Create our resources with separate CloudFormation templates
 resources:
   # DynamoDB
-  - ${file(resources/dynamodb-table.yml)}
-  - ${file(resources/dynamodb-table2.yml)}
+  - ${file(resources/dynamodb-table-accounts.yml)}
+  - ${file(resources/dynamodb-table-templates.yml)}
   # S3
   - ${file(resources/s3-bucket.yml)}
   # Cognito
