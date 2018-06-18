@@ -35,8 +35,8 @@ provider:
   environment:
     tableNameAcc: 
       Ref: AccountsTable
-    tableNameTemp: 
-      Ref: TemplatesTable
+#    tableNameTemp: 
+#      Ref: TemplatesTable
     stripeSecretKey: ${self:custom.environment.stripeSecretKey}
 
   iamRoleStatements:
