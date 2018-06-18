@@ -146,6 +146,18 @@ functions:
           cors: true
           authorizer: aws_iam
 
+  updateTemp:
+    # Defines an HTTP API endpoint that calls the main function in update.js
+    # - path: url path is /accounts/{id}
+    # - method: PUT request
+    handler: updateTemp.main
+    events:
+      - http:
+          path: templates/{id}
+          method: put
+          cors: true
+          authorizer: aws_iam
+
   delete:
     # Defines an HTTP API endpoint that calls the main function in delete.js
     # - path: url path is /accounts/{id}
@@ -157,6 +169,19 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+
+  deleteTemp:
+    # Defines an HTTP API endpoint that calls the main function in delete.js
+    # - path: url path is /accounts/{id}
+    # - method: DELETE request
+    handler: deleteTemp.main
+    events:
+      - http:
+          path: templates/{id}
+          method: delete
+          cors: true
+          authorizer: aws_iam
+
   billing:
     handler: billing.main
     events:
