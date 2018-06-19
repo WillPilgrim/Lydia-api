@@ -14,10 +14,21 @@ export async function main(event, context, callback) {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET content = :content, attachment = :attachment",
+    UpdateExpression: "SET accountFromId = :accountFromId, accountToId = :accountToId, templateType = :templateType, startDate = :startDate, endDate = :endDate, numPeriods = :numPeriods, noEnd = :noEnd, periodType = :periodType, periodCnt = :periodCnt, description = :description, amount = :amount, inflation = :inflation, ccRelDate = :ccRelDate",
     ExpressionAttributeValues: {
-      ":attachment": data.attachment ? data.attachment : null,
-      ":content": data.content ? data.content : null
+      ":accountFromId": data.accountFromId ? data.accountFromId : null,
+      ":accountToId": data.accountToId ? data.accountToId : null,
+      ":templateType": data.templateType ? data.templateType : null,
+      ":startDate": data.startDate ? data.startDate : null,
+      ":endDate": data.endDate ? data.endDate : null,
+      ":numPeriods": data.numPeriods ? data.numPeriods : null,
+      ":noEnd": data.noEnd ? data.noEnd : null,
+      ":periodType": data.periodType ? data.periodType : null,
+      ":periodCnt": data.periodCnt ? data.periodCnt : null,
+      ":description": data.description ? data.description : null,
+      ":amount": data.amount ? data.amount : null,
+      ":inflation": data.inflation ? data.inflation : null,
+      ":ccRelDate": data.ccRelDate ? data.ccRelDate : null
     },
     ReturnValues: "ALL_NEW"
   };

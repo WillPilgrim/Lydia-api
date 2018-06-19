@@ -1,0 +1,9 @@
+{
+    "body": "{\"accountFromId\":\"123\",\"accountToId\":\"\",\"templateType\":\"Debit\",\"startDate\":\"2018-03-22\",\"endDate\":\"2018-08-01\",\"numPeriods\":\"3\",\"noEnd\":\"false\",\"periodType\":\"Month\",\"periodCnt\":\"3\",\"description\":\"Petrol\",\"amount\":\"50.00\",\"inflation\":\"Y\",\"ccRelDate\":\"7\"}",
+    "requestContext": {
+      "identity": {
+        "cognitoIdentityId": "USER-SUB-1234"
+      }
+    }
+  }
+  
