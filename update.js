@@ -14,10 +14,10 @@ export async function main(event, context, callback) {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET name = :name, description = :description, openingDate = :openingDate, closingDate = :closingDate, amount = :amount, crRate = :crRate, dbRate = :dbRate, interest = :interest",
+    UpdateExpression: "SET accName = :accName, description = :description, openingDate = :openingDate, closingDate = :closingDate, amount = :amount, crRate = :crRate, dbRate = :dbRate, interest = :interest",
  
     ExpressionAttributeValues: {
-      ":name": data.name ? data.name : null,
+      ":accName": data.accName ? data.accName : null,
       ":description": data.description ? data.description : null,
       ":openingDate": data.openingDate ? data.openingDate : null,
       ":closingDate": data.closingDate ? data.closingDate : null,

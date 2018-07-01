@@ -10,7 +10,7 @@ export async function main(event, context, callback) {
       userId: event.requestContext.identity.cognitoIdentityId,
       accountId: uuid.v1(),
       description: data.description,
-      name: data.name,
+      accName: data.accName,
       openingDate: data.openingDate,
       closingDate: data.closingDate,
       amount: data.amount,
