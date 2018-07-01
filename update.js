@@ -16,8 +16,14 @@ export async function main(event, context, callback) {
     // 'ExpressionAttributeValues' defines the value in the update expression
     UpdateExpression: "SET content = :content, attachment = :attachment",
     ExpressionAttributeValues: {
-      ":attachment": data.attachment ? data.attachment : null,
-      ":content": data.content ? data.content : null
+      ":name": data.name ? data.name : null,
+      ":description": data.description ? data.description : null,
+      ":openingDate": data.openingDate ? data.openingDate : null,
+      ":closingDate": data.closingDate ? data.closingDate : null,
+      ":amount": data.amount ? data.amount : null,
+      ":crRate": data.crRate ? data.crRate : null,
+      ":dbRate": data.dbRate ? data.dbRate : null,
+      ":interest": data.interest ? data.interest : null
     },
     ReturnValues: "ALL_NEW"
   };
