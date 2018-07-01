@@ -21,9 +21,9 @@ export async function main(event, context, callback) {
       ":description": data.description ? data.description : null,
       ":openingDate": data.openingDate ? data.openingDate : null,
       ":closingDate": data.closingDate ? data.closingDate : null,
-      ":amount": data.amount ? data.amount : null,
-      ":crRate": data.crRate ? data.crRate : null,
-      ":dbRate": data.dbRate ? data.dbRate : null,
+      ":amount": data.amount,
+      ":crRate": data.crRate,
+      ":dbRate": data.dbRate,
       ":interest": data.interest ? data.interest : null
     },
     ReturnValues: "ALL_NEW"
