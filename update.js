@@ -24,7 +24,7 @@ export async function main(event, context, callback) {
       ":amount": data.amount,
       ":crRate": data.crRate,
       ":dbRate": data.dbRate,
-      ":interest": data.interest ? data.interest : null
+      ":interest": data.interest
     },
     ReturnValues: "ALL_NEW"
   };
