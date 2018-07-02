@@ -14,7 +14,7 @@ export async function main(event, context, callback) {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET accName = :accName, description = :description, openingDate = :openingDate, closingDate = :closingDate, amount = :amount, crRate = :crRate, dbRate = :dbRate, interest = :interest",
+    UpdateExpression: "SET accName = :accName, description = :description, openingDate = :openingDate, closingDate = :closingDate, amount = :amount, crRate = :crRate, dbRate = :dbRate, interest = :interest, intFirstAppliedDate = :intFirstAppliedDate, periodType = :periodType, periodCnt = :periodCnt",
  
     ExpressionAttributeValues: {
       ":accName": data.accName ? data.accName : null,
@@ -24,6 +24,9 @@ export async function main(event, context, callback) {
       ":amount": data.amount,
       ":crRate": data.crRate,
       ":dbRate": data.dbRate,
+      ":intFirstAppliedDate": data.intFirstAppliedDate ? data.intFirstAppliedDate : null,
+      ":periodType": data.periodType,
+      ":periodCnt": data.periodCnt,
       ":interest": data.interest
     },
     ReturnValues: "ALL_NEW"
