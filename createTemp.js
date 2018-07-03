@@ -18,6 +18,8 @@ export async function main(event, context, callback) {
       noEnd: data.noEnd,
       periodType: data.periodType,
       periodCnt: data.periodCnt,
+      paymentDay: data.paymentDay,
+      periodLastDay: data.periodLastDay,
       description: data.description,
       amount: data.amount,
       inflation: data.inflation,

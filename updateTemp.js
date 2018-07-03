@@ -14,7 +14,7 @@ export async function main(event, context, callback) {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET accountFromId = :accountFromId, accountToId = :accountToId, templateType = :templateType, startDate = :startDate, endDate = :endDate, numPeriods = :numPeriods, noEnd = :noEnd, periodType = :periodType, periodCnt = :periodCnt, description = :description, amount = :amount, inflation = :inflation, ccRelDate = :ccRelDate",
+    UpdateExpression: "SET accountFromId = :accountFromId, accountToId = :accountToId, templateType = :templateType, startDate = :startDate, endDate = :endDate, numPeriods = :numPeriods, noEnd = :noEnd, periodType = :periodType, periodCnt = :periodCnt, description = :description, amount = :amount, inflation = :inflation, ccRelDate = :ccRelDate, paymentDay = :paymentDay, periodLastDay = :periodLastDay",
     ExpressionAttributeValues: {
       ":accountFromId": data.accountFromId ? data.accountFromId : null,
       ":accountToId": data.accountToId ? data.accountToId : null,
@@ -25,6 +25,8 @@ export async function main(event, context, callback) {
       ":noEnd": data.noEnd ? data.noEnd : null,
       ":periodType": data.periodType ? data.periodType : null,
       ":periodCnt": data.periodCnt ? data.periodCnt : null,
+      ":paymentDay": data.paymentDay ? data.paymentDay : null,
+      ":periodLastDay": data.periodLastDay ? data.periodLastDay : null,
       ":description": data.description ? data.description : null,
       ":amount": data.amount ? data.amount : null,
       ":inflation": data.inflation ? data.inflation : null,
