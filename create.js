@@ -20,6 +20,7 @@ export async function main(event, context, callback) {
       crRate: data.crRate,
       dbRate: data.dbRate,
       interest: data.interest,
+      sortOrder: data.sortOrder,
       createdAt: Date.now()
     }
   };
