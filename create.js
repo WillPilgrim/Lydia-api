@@ -21,6 +21,7 @@ export async function main(event, context, callback) {
       dbRate: data.dbRate,
       interest: data.interest,
       sortOrder: data.sortOrder,
+      hide: data.hide,
       createdAt: Date.now()
     }
   };
